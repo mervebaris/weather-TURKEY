@@ -26,8 +26,7 @@ const Harita = () => {
       {cityComponent}
     </Tooltip>
   );
-
-
+  
   useEffect(() => {
     axios.get(url).then((response) => {
       setData(response.data);
