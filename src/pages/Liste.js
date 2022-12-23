@@ -506,9 +506,23 @@ export default function Table() {
     navigate(`/detay/${vars.plate}`, { state: { name:vars.name } });
 
   }
+  const harita = (vars) =>{
+
+    console.log(vars)
+
+
+    navigate(`/`);
+
+  }
 
   return (
-    <div className="w-full bg-gradientBg bg-no-repeat bg-cover bg-center flex-col ">
+    <div>
+  
+    <div className="w-full bg-gradientBg bg-no-repeat bg-cover bg-center ">
+    <div  className='w-full bg-center flex flex-col justify-center items-center'>
+    <button onClick={harita} type="button" className="mx-auto text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Harita</button>
+    </div>
+    <div className="w-3/4 bg-gradientBg bg-no-repeat bg-cover bg-center flex-col mx-auto ">
       <div className="overflow-x-auto">
         <div className="p-1.5 w-full inline-block align-middle">
           <div className="overflow-hidden border rounded-lg">
@@ -540,6 +554,8 @@ export default function Table() {
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }
